@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <i class="material-icons">menu</i>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="Logo">
+        </div>
+
+        <div class="nav-center">
+            <form class="search-bar">
+                <input type="text" placeholder="Pesquisar">
+                <button><i class="material-icons">search</i></button>
+            </form>
+            <div class="mic-icon"><i class="material-icons">mic</i></div>
+        </div>
+
+        <div class="nav-right">
+            <i class="material-icons">video_call</i>
+            <i class="material-icons">notifications</i>
+            <div class="user-avatar"></div>
+        </div>
+    </nav>
+
+    <main class="main-container">
+        <aside class="sidebar">
+            <div class="nav-link active"><i class="material-icons">home</i><span>Início</span></div>
+            <div class="nav-link"><i class="material-icons">explore</i><span>Explorar</span></div>
+            <div class="nav-link"><i class="material-icons">subscriptions</i><span>Inscrições</span></div>
+            <hr>
+            <div class="nav-link"><i class="material-icons">video_library</i><span>Biblioteca</span></div>
+            <div class="nav-link"><i class="material-icons">history</i><span>Histórico</span></div>
+        </aside>
+
+        <section class="content">
+            <div class="categories">
+                <button class="category-chip active">Tudo</button>
+                <button class="category-chip">Música</button>
+                <button class="category-chip">Jogos</button>
+                <button class="category-chip">Ao vivo</button>
+                <button class="category-chip">Mixes</button>
+                <button class="category-chip">Programação</button>
+            </div>
+
+            <div class="video-grid" id="videoGrid">
+                </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
