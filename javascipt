@@ -1,0 +1,37 @@
+const videoGrid = document.getElementById('videoGrid');
+
+const videos = [
+    { title: "Aprenda HTML e CSS do zero", channel: "Dev Academy", views: "100 mil visualizações", time: "há 2 dias", thumb: "https://picsum.photos/seed/1/300/200" },
+    { title: "Melhores setups 2026", channel: "Tech World", views: "500 mil visualizações", time: "há 1 semana", thumb: "https://picsum.photos/seed/2/300/200" },
+    { title: "Como criar um site estilo YouTube", channel: "Coding Lab", views: "10 mil visualizações", time: "há 5 horas", thumb: "https://picsum.photos/seed/3/300/200" },
+    { title: "O guia do JavaScript Moderno", channel: "Web Master", views: "80 mil visualizações", time: "há 3 dias", thumb: "https://picsum.photos/seed/4/300/200" },
+    { title: "Viagem ao Japão: Vlog", channel: "Traveler", views: "1.2 mi visualizações", time: "há 1 mês", thumb: "https://picsum.photos/seed/5/300/200" },
+    { title: "Desafio de 24h com IA", channel: "Future AI", views: "300 mil visualizações", time: "há 2 semanas", thumb: "https://picsum.photos/seed/6/300/200" },
+    { title: "Música Lo-fi para estudar", channel: "Chill Beats", views: "2 mi visualizações", time: "há 6 meses", thumb: "https://picsum.photos/seed/7/300/200" },
+    { title: "Gameplay de Elden Ring", channel: "Pro Gamer", views: "45 mil visualizações", time: "há 10 horas", thumb: "https://picsum.photos/seed/8/300/200" }
+];
+
+function loadVideos() {
+    videoGrid.innerHTML = videos.map(video => `
+        <div class="video-card">
+            <img src="${video.thumb}" class="thumbnail">
+            <div class="video-info">
+                <div class="channel-icon"></div>
+                <div class="details">
+                    <h3>${video.title}</h3>
+                    <p>${video.channel}</p>
+                    <p>${video.views} • ${video.time}</p>
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
+document.querySelectorAll('.category-chip').forEach(chip => {
+    chip.addEventListener('click', function() {
+        document.querySelector('.category-chip.active').classList.remove('active');
+        this.classList.add('active');
+    });
+});
+
+loadVideos();
